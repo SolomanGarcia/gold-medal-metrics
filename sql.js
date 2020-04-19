@@ -109,6 +109,13 @@ const bestEvent = country => {
   return countryBestWithCount('event', country);
 };
 
+const numberGenderMedalists = (gender, country) => {
+  if (['Men', 'Women'].includes(gender)) {
+    return `SELECT COUNT(DISTINCT name) FROM goldMedal WHERE country = '${country}' AND gender = '${gender}';`;
+  }
+  return null;
+};
+
 /*
 Returns a SQL query string that will find the number of male medalists.
 */
