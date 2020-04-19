@@ -8,6 +8,7 @@ const {createCountryTable, createGoldMedalTable, goldMedalNumber, bestYear, most
 const db = new sqlite3.Database('./gold_medals.sqlite');
 
 const app = express();
+app.use(express.static(__dirname + '/'));
 app.use(cors());
 
 const lowerCaseObjectKeys = (questionableKeys) => {

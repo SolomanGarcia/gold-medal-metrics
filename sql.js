@@ -145,10 +145,10 @@ Returns a SQL query string that will find the medals a country has won
 optionally ordered by the given field in the specified direction.
 */
 
-const orderedMedals = (country, field, isAscending) => {
+const orderedMedals = (country, field, sortAscending) => {
   let orderingString = '';
   if (field) {
-    if (isAscending) {
+    if (sortAscending) {
       orderingString = `ORDER BY ${field} ASC`;
     } else {
       orderingString = `ORDER BY ${field} DESC`;
@@ -164,10 +164,10 @@ as well as the percentage of this country's wins the sport represents,
 aliased as 'percent'. Optionally ordered by the given field in the specified direction.
 */
 
-const orderedSports = (country, field, isAscending) => {
+const orderedSports = (country, field, sortAscending) => {
   let orderingString = '';
   if (field) {
-    if (isAscending) {
+    if (sortAscending) {
       orderingString = `ORDER BY ${field} ASC`;
     } else {
       orderingString = `ORDER BY ${field} DESC`;
