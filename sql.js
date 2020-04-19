@@ -145,7 +145,7 @@ Returns a SQL query string that will find the medals a country has won
 optionally ordered by the given field in the specified direction.
 */
 
-const orderedMedals = (country, field, sortAscending) => {
+const orderedMedals = (country, field, isAscending) => {
   let orderingString = '';
   if (field) {
     if (isAscending) {
