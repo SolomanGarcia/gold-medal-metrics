@@ -79,7 +79,7 @@ won the most medals, along with the number of medals aliased to 'count'.
 */
 
 const bestYear = country => {
-  return;
+  return countryBestWithCount('year', country);
 };
 
 /*
