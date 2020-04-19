@@ -66,6 +66,13 @@ const mostWinterWins = country => {
   return mostSeasonWins('Winter', country);
 };
 
+const countryBestWithCount = (bestThing, country) => {
+  if (['year', 'discipline', 'sport', 'event'].includes(bestThing)) {
+    return `SELECT ${bestThing}, COUNT(*) AS count FROM goldMedal WHERE country = '${country}' GROUP BY ${bestThing} ORDER BY COUNT(*) DESC LIMIT 1;`;
+  }
+  return null;
+};
+
 /*
 Returns a SQL query string that will find the year where the given country 
 won the most medals, along with the number of medals aliased to 'count'.
