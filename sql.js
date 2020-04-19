@@ -106,7 +106,7 @@ won the most medals, along with the number of medals aliased to 'count'.
 */
 
 const bestEvent = country => {
-  return;
+  return countryBestWithCount('event', country);
 };
 
 /*
