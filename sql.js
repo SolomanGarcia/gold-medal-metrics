@@ -154,7 +154,7 @@ const orderedMedals = (country, field, sortAscending) => {
       orderingString = `ORDER BY ${field} DESC`;
     }
   }
-  return `SELECT * FROM goldMedal`;
+  return `SELECT * FROM goldMedal WHERE country = '${country}' ${orderingString};`;
 };
 
 /*
