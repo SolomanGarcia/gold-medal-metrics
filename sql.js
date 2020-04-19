@@ -63,7 +63,7 @@ won the most winter medals, along with the number of medals aliased to 'count'.
 */
 
 const mostWinterWins = country => {
-  return;
+  return mostSeasonWins('Winter', country);
 };
 
 /*
