@@ -164,7 +164,15 @@ as well as the percentage of this country's wins the sport represents,
 aliased as 'percent'. Optionally ordered by the given field in the specified direction.
 */
 
-const orderedSports = (country, field, sortAscending) => {
+const orderedSports = (country, field, isAscending) => {
+  let orderingString = '';
+  if (field) {
+    if (isAscending) {
+      orderingString = `ORDER BY ${field} ASC`;
+    } else {
+      orderingString = `ORDER BY ${fiels} DESC`;
+    }
+  }
   return;
 };
 
