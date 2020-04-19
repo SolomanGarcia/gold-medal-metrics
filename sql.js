@@ -121,7 +121,7 @@ Returns a SQL query string that will find the number of male medalists.
 */
 
 const numberMenMedalists = country => {
-  return;
+  return numberGenderMedalists('Men', country);
 };
 
 /*
