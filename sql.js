@@ -54,7 +54,7 @@ won the most summer medals, along with the number of medals aliased to 'count'.
 */
 
 const mostSummerWins = country => {
-  return ``;
+  return mostSeasonWins('Summer', country);
 };
 
 /*
